@@ -15,7 +15,7 @@ LABEL maintainer="horky@d3s.mff.cuni.cz"
 #  - developer tools
 RUN dnf install -y mc vim \
     && dnf install -y python3 python3-pip pylint python3-virtualenv \
-    && dnf install -y git ShellCheck jq make pandoc bc findutils wget diffutils \
+    && dnf install -y git ShellCheck jq yajl make pandoc bc findutils wget diffutils file \
     && dnf clean all
 COPY --from=build /tmp/bats-core-1.3.0/PKG /
 
