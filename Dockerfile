@@ -18,7 +18,7 @@ RUN dnf install -y mc vim \
     && dnf install -y git ShellCheck jq yajl make pandoc bc findutils wget diffutils file \
     && dnf install -y perl-Image-ExifTool poppler-utils ImageMagick \
     && dnf install -y ruby rubygem-bundler \
-    && dnf clean all
+    && dnf clean all \
     && mkdir -p /srv/nswi177/ \
     && curl --silent https://raw.githubusercontent.com/d-iii-s/docker-mffd3s-nswi177-base/main/machines.status >/srv/nswi177/machine.status \
     && curl --silent https://raw.githubusercontent.com/d-iii-s/docker-mffd3s-nswi177-base/main/hurricane.jpg >/srv/nswi177/hurricane.jpg \
