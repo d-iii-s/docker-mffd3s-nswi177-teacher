@@ -12,4 +12,8 @@ LABEL maintainer="horky@d3s.mff.cuni.cz"
 RUN dnf install -y mc vim && dnf clean all
 COPY --from=build /tmp/bats-core-1.3.0/PKG /
 
+# Cache Python libraries
+COPY cache_pip_libs.sh /root/cache_pip_libs.sh
+RUN bash /root/cache_pip_libs.sh
+
 CMD echo "Run with -it /bin/bash and proper volume mounted"
